@@ -70,13 +70,17 @@
 	
 	var _AlbumsContainer2 = _interopRequireDefault(_AlbumsContainer);
 	
+	var _AlbumContainer = __webpack_require__(224);
+	
+	var _AlbumContainer2 = _interopRequireDefault(_AlbumContainer);
+	
 	var _ArtistsContainer = __webpack_require__(230);
 	
 	var _ArtistsContainer2 = _interopRequireDefault(_ArtistsContainer);
 	
-	var _AlbumContainer = __webpack_require__(224);
+	var _ArtistContainer = __webpack_require__(233);
 	
-	var _AlbumContainer2 = _interopRequireDefault(_AlbumContainer);
+	var _ArtistContainer2 = _interopRequireDefault(_ArtistContainer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -92,7 +96,8 @@
 	            _react2.default.createElement(_reactRouter.IndexRedirect, { to: 'albums' }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'albums', component: _AlbumsContainer2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'albums/:albumId', component: _AlbumContainer2.default }),
-	            _react2.default.createElement(_reactRouter.Route, { path: 'artists', component: _ArtistsContainer2.default })
+	            _react2.default.createElement(_reactRouter.Route, { path: 'artists', component: _ArtistsContainer2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'artists/:artistId', component: _ArtistContainer2.default })
 	        )
 	    )
 	), document.getElementById('app'));
@@ -24840,7 +24845,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            console.log("HAYRWHAHSAHASD");
 	            var selectedAlbum = this.props.selectedAlbum;
 	
 	            return _react2.default.createElement(
@@ -25378,6 +25382,41 @@
 	    _react2.default.createElement(_SongsContainer2.default, { songs: selectedArtist.songs })
 	  );
 	};
+	
+	// export default class Artist extends React.Component {
+	//
+	//     componentDidMount () {
+	//         console.log("LOG FROM ARTIST JS", this.props.params)
+	//     }
+	//
+	//     render() {
+	//         const { selectedArtist, go } = this.props;
+	//         return (
+	//             <div>
+	//               <h3>{ selectedArtist.name }</h3>
+	//               <h3>Albums</h3>
+	//               <div className="row">
+	//                 {
+	//                   selectedArtist.albums.map(album => (
+	//                     <div className="col-xs-4" key={album.id}>
+	//                       <a className="thumbnail" href="#" onClick={() => go(album)}>
+	//                         <img src={ album.imageUrl } />
+	//                         <div className="caption">
+	//                           <h5>
+	//                             <span>{ album.name }</span>
+	//                           </h5>
+	//                           <small>{ album.songs.length } songs</small>
+	//                         </div>
+	//                       </a>
+	//                     </div>
+	//                   ))
+	//                 }
+	//               </div>
+	//               <SongsContainer songs={selectedArtist.songs} />
+	//             </div>
+	//         )
+	//     }
+	// }
 
 /***/ },
 /* 235 */

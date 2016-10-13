@@ -23,7 +23,6 @@ export default class Album extends React.Component {
     }
 
     render() {
-        console.log("HAYRWHAHSAHASD");
         const { selectedAlbum } = this.props;
         return (
             <div className="album">
