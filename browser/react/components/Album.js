@@ -19,7 +19,7 @@ import SongsContainer from '../containers/SongsContainer';
 export default class Album extends React.Component {
 
     componentDidMount () {
-        console.log("ALBUM JS LOG ", this.props.params)
+      this.props.getTheAlbum(this.props.params.albumId)
     }
 
     render() {
